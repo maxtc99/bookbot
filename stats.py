@@ -19,6 +19,17 @@ def get_num_char(text):
                 dict.update({char:counter})  
     return dict
             
-            # if char exists in dictionary then dict value += 1
-            # else 
-            # dict add  key / value
+def sort_on(items):
+    return items["num"]
+         
+def get_sorted_list(dict):
+    dline = {}
+    list = []
+    for k in dict:
+        dline = {"char":k, "num":dict[k]}
+
+        list.append(dline)
+    list.sort(reverse=True, key=sort_on)    
+    return list
+
+
